@@ -47,7 +47,7 @@ app.get('/api/products/:productId', (req, res, next) => {
   db.query(sql, params)
     .then(result => {
       if (!result.rows[0]) {
-        res.status(500).json({
+        res.status(404).json({
           error: `cannot find product with"productId ${productId}`
         });
       } else res.json(result.rows[0]);
