@@ -25,7 +25,7 @@ class ProductList extends React.Component {
     return (
       <div className="container col-12">
         <div className="row col-12 row d-flex justify-content-center">
-          <ProductListItem items={this.state.products} />
+          {this.state.products.map(product => < ProductListItem key={product.productId} item={product}/>)}
         </div>
       </div>
     );
