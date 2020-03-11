@@ -1,0 +1,41 @@
+.header{
+  background-color: #353a40;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 175px;
+  margin-bottom: 1%;
+}
+
+.background{
+  background-color: #f8f9fa;
+}
+
+.bottomM{
+  margin-bottom: 25px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: lightgray;
+  margin: 5px;
+  background-color: white;
+  justify-content: center;
+}
+
+.size{
+  object-fit: contain;
+  height: 300px;
+  width: 100%;
+}
+
+.bottom{
+  margin-bottom: 10px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.price{
+  color: gray;
+}
