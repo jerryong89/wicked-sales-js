@@ -21,6 +21,14 @@ class ProductList extends React.Component {
       }));
   }
 
+  // getProductById() {
+  //   fetch('/api/products/1')
+  //     .then(res => res.json())
+  //     .then(items => this.setState({
+  //       products: items
+  //     }));
+  // }
+
   render() {
     return (
       <div className="container col-12">
