@@ -3,7 +3,7 @@
   color: white;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 175px;
+  padding-left: 12%;
   margin-bottom: 1%;
 }
 
@@ -32,10 +32,24 @@
   margin-bottom: 10px;
 }
 
-.bold{
-  font-weight: bold;
+.detailName{
+  margin-top: 35px;
+  font-size: 20pt;
 }
 
-.price{
-  color: gray;
+.detailPage{
+ border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: lightgray;
+  margin-top: 40px;
+  background-color: white;
+}
+
+.topRow{
+  margin-top: 20px;
+}
+
+.bottomRow{
+  margin: 15px;
 }

@@ -1,16 +1,13 @@
 import React from 'react';
 
-function ProductListItem(props) {
+export default function ProductListItem(props) {
   const product = props.item;
   return (
-    <div className="bottomM col-3">
-      <div >
-        <div ><img className="size" src={product.image} alt=""/></div>
-        <div className="bottom bold">{product.name}</div>
-        <div className="bottom price">${(product.price / 100).toFixed(2)}</div>
-        <div >{product.shortDescription}</div>
-      </div >
+    <div onClick={() => props.changeItem('details', product.productId)} className="bottomM col-3">
+      <div ><img className="size" src={product.image} /></div>
+      <div className="bottom font-weight-bold">{product.name}</div>
+      <div className="bottom text-secondary">${(product.price / 100).toFixed(2)}</div>
+      <div className="bottom">{product.shortDescription}</div>
     </div>
   );
 }
-export default ProductListItem;

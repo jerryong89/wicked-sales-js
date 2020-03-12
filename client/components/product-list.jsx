@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductListItem from './product-list-item';
 
-class ProductList extends React.Component {
+export default class ProductList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,10 +25,9 @@ class ProductList extends React.Component {
     return (
       <div className="container col-12">
         <div className="row col-12 row d-flex justify-content-center">
-          {this.state.products.map(product => < ProductListItem key={product.productId} item={product}/>)}
+          {this.state.products.map(product => < ProductListItem key={product.productId} changeItem={this.props.changeItem} item={product} />)}
         </div>
       </div>
     );
   }
 }
-export default ProductList;
