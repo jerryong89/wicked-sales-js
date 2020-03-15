@@ -19,6 +19,11 @@ export default class App extends React.Component {
     });
   }
 
+  getCartItems() {
+    fetch('/api/cart')
+      .then(res => res.json());
+  }
+
   render() {
     const label = this.state.view.name === 'catalog' ? <ProductList changeItem={this.setView} />
       : <ProductDetails changeItem={this.setView} productId={this.state.view.params} />;
