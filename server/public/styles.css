@@ -53,3 +53,10 @@
 .bottomRow{
   margin: 15px;
 }
+
+.cart{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 12%;
+  margin-top: 1.5%;
+}

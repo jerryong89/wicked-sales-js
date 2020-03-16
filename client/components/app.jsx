@@ -25,7 +25,10 @@ export default class App extends React.Component {
 
   getCartItems() {
     fetch('/api/cart')
-      .then(res => res.json());
+      .then(res => res.json())
+      .then(item => this.setState({
+        cart: item.length
+      }));
   }
 
   render() {
@@ -33,7 +36,7 @@ export default class App extends React.Component {
       : <ProductDetails changeItem={this.setView} productId={this.state.view.params} />;
     return (
       <div>
-        <Header />
+        <Header cartItemCount={this.state.cart}/>
         {label}
       </div>
     );
