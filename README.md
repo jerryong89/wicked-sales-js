@@ -1,7 +1,7 @@
 # wicked-sales-js
 A full stack Node.js and React shopping cart app.
 
-# Technologies Used
+## Technologies Used
 <ul>
   <li>React.js</li>
   <li>HTML5</li>
@@ -13,10 +13,10 @@ A full stack Node.js and React shopping cart app.
   <li>PostgreSQL</li>
 </ul>
 
-# Live Demo
+## Live Demo
 Link: https://wicked-sales.jerry-ong.com
 
-# Features
+## Features
 <ul>
   <li>Users can view list of all products</li>
   <li>Users can view details on all products</li>
@@ -26,7 +26,7 @@ Link: https://wicked-sales.jerry-ong.com
   <li>Users can enter purchase information and place order</li>
 </ul>
 
-# Preview
+## Preview
 
 
 # Development
