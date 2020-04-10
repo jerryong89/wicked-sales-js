@@ -32,12 +32,13 @@ export default class App extends React.Component {
   }
 
   render() {
-    const label = this.state.view.name === 'catalog' ? <ProductList changeItem={this.setView} />
-      : <ProductDetails changeItem={this.setView} productId={this.state.view.params} />;
+    // const label = this.state.view.name === 'catalog' ? <ProductList changeItem={this.setView} />
+    //   : <ProductDetails changeItem={this.setView} productId={this.state.view.params} />;
     return (
       <div>
         <Header cartItemCount={this.state.cart}/>
-        {label}
+        <ProductDetails changeItem={this.setView} productId={this.state.view.params} />
+        <ProductList changeItem={this.setView} />
       </div>
     );
   }
