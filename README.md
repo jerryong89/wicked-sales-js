@@ -14,7 +14,7 @@ A full stack Node.js and React shopping cart app.
 </ul>
 
 # Live Demo
-Try the application at <a href="https://daes-flowers.danny-dae-kim.com/">https://daes-flowers.danny-dae-kim.com/</a>
+Link: https://wicked-sales.jerry-ong.com
 
 # Features
 <ul>
