@@ -57,13 +57,6 @@ app.get('/api/products/:productId', (req, res, next) => {
 });
 
 app.get('/api/cart', (req, res, next) => {
-  const sql = `
-    select "cartItemId",
-           "cartId",
-           "productId",
-           "price"
-      from "cartItems";
-  `;
   const sqlAlt = `
     select "c"."cartItemId",
            "c"."price",
@@ -76,9 +69,7 @@ app.get('/api/cart', (req, res, next) => {
      where "c"."cartId" = $1
     `;
   if (!req.session.cartId) {
-    db.query(sql)
-      .then(result => res.json([]))
-      .catch(err => next(err));
+    res.json([]);
   } else {
     db.query(sqlAlt, [req.session.cartId])
       .then(result => res.json(result.rows))
