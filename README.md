@@ -30,7 +30,7 @@ Link: https://wicked-sales.jerry-ong.com
 </ul>
 
 ## Preview
-
+![](https://github.com/jerryong89/wicked-sales-js/blob/master/wickedSalesPreview.png)
 
 # Development
 ### System Requirements
