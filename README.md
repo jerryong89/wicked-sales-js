@@ -1,5 +1,5 @@
 # wicked-sales-js
->-Maintained by: `jerryong89`
+> -Maintained by: `jerryong89`
 
 ## Description
 A full stack Node.js and React shopping cart app.
