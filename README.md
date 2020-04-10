@@ -4,7 +4,7 @@
 ## Description
 A full stack Node.js and React shopping cart app.
 
-## Technologies Used
+## Technologies Used:
 <ul>
   <li>React.js</li>
   <li>HTML5</li>
