@@ -11,6 +11,7 @@ export default class App extends React.Component {
       cart: []
     };
     this.setView = this.setView.bind(this);
+    this.getCartItems = this.getCartItems.bind(this);
   }
 
   setView(name, params) {
@@ -22,6 +23,10 @@ export default class App extends React.Component {
   getCartItems() {
     fetch('/api/cart')
       .then(res => res.json());
+  }
+
+  componentDidMount() {
+    this.getCartItems();
   }
 
   render() {
