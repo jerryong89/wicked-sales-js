@@ -30,7 +30,8 @@ export default class App extends React.Component {
   }
 
   addToCart(product) {
-    fetch('/api/cart', {
+    const Id = product.productId;
+    fetch(`/api/cart/${Id}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(product)
