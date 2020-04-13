@@ -24,6 +24,7 @@ export default class ProductDetails extends React.Component {
   }
 
   render() {
+    const product = this.state.product;
     if (!this.state.product) {
       return null;
     } else {
@@ -38,6 +39,7 @@ export default class ProductDetails extends React.Component {
               <div className="bottom font-weight-bold detailName">{this.state.product.name}</div>
               <div className="bottom text-secondary">${(this.state.product.price / 100).toFixed(2)}</div>
               <div >{this.state.product.shortDescription}</div>
+              <button type="button" className="btn btn-primary" onClick={() => this.props.addProduct(product)}>Add to Cart</button>
             </div>
           </div>
           <div className="row bottomRow" >{this.state.product.longDescription}</div>
