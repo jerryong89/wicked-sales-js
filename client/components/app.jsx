@@ -53,13 +53,18 @@ export default class App extends React.Component {
   }
 
   render() {
-    const label = this.state.view.name === 'catalog' ? <ProductList changeItem={this.setView} />
-      : <ProductDetails changeItem={this.setView} productId={this.state.view.params} addProduct={this.addToCart} />;
+    let conditionalRender;
+    if (this.state.view.name === 'details') {
+      conditionalRender = <ProductDetails changeItem={this.setView} productId={this.state.view.params} addProduct={this.addToCart} />;
+    } else if (this.state.view.name === 'catalog') {
+      conditionalRender = <ProductList changeItem={this.setView} />;
+    } else if (this.state.view.name === 'cart') {
+      conditionalRender = <CartSummary changeItem={this.setView} productId={this.state.view.params} items={this.state.cart}/>;
+    }
     return (
       <div>
-        <Header cartItemCount={this.state.cart} />
-        {label}
-        <CartSummary items={this.state.cart}/>
+        <Header changeItem={this.setView} cartItemCount={this.state.cart} />
+        {conditionalRender}
       </div>
     );
   }

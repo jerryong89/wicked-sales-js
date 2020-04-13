@@ -18,6 +18,7 @@ export default class CartSummary extends React.Component {
         {itemsInCart}
         {cartItem.map(item => { return <CartSummaryItem key={item.cartItemId} cartObject={item} />; })}
       </div>
+
     );
   }
 }
