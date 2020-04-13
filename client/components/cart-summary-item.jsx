@@ -1,19 +1,8 @@
 import React from 'react';
 
 export default class CartSummaryItem extends React.Component {
-
   render() {
-    // console.log('this is the other side', this.props.cartObject);
     return (
-    // <div>
-    //   <div className="col-md-4">
-    //     <img src={this.props.cartObject.image} className="card-img" alt="product-image"></img>
-    //   </div>
-    //   <div>{this.props.cartObject.name}</div>
-    //   <div>{this.props.cartObject.price}</div>
-    //   <div>{this.props.cartObject.shortDescription}</div>
-    // </div>
-
       <div className="container col-11 detailPage ">
         <div className="row topRow">
           <div className="column col-5">
@@ -25,7 +14,6 @@ export default class CartSummaryItem extends React.Component {
             <div >{this.props.cartObject.shortDescription}</div>
           </div>
         </div>
-        {/* <div className="row bottomRow" >{this.state.product.longDescription}</div> */}
       </div >
     );
   }
