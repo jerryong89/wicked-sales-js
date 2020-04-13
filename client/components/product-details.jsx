@@ -38,6 +38,7 @@ export default class ProductDetails extends React.Component {
               <div className="bottom font-weight-bold detailName">{this.state.product.name}</div>
               <div className="bottom text-secondary">${(this.state.product.price / 100).toFixed(2)}</div>
               <div >{this.state.product.shortDescription}</div>
+              <div><button type="button" className="btn btn-primary">Add to Cart</button></div>
             </div>
           </div>
           <div className="row bottomRow" >{this.state.product.longDescription}</div>
