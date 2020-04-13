@@ -144,6 +144,10 @@ app.post('/api/cart/:productId', (req, res, next) => {
   }
 });
 
+app.post('/api/orders', (req, res, next) => {
+
+});
+
 app.use('/api', (req, res, next) => {
   next(new ClientError(`cannot ${req.method} ${req.originalUrl}`, 404));
 });
