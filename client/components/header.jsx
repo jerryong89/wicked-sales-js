@@ -5,7 +5,7 @@ export default class Header extends React.Component {
     return (
       <div className="row">
         <h3 className="header col-6">$ Wicked Sales</h3>
-        <div className="header col-6"><div className="cart">{this.props.cartItemCount.length} Items &nbsp;<i /* onClick={()=>this.props.cartItems.length} */ className="fas fa-shopping-cart cart"></i></div></div>
+        <div className="header col-6"><div className="cart">{this.props.cartItemCount.length} Items &nbsp;<i onClick={() => this.props.changeItem('cart')} className="fas fa-shopping-cart cart"></i></div></div>
       </div>
     );
   }
