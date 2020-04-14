@@ -22,7 +22,7 @@ export default class CheckoutForm extends React.Component {
             <input type="credit-card" className="form-control"></input>
             <label>Shipping Address</label>
             <input type="shipping-address" className="form-control"></input>
-            <div onClick={() => this.props.changeItem('checkout', {})}> &lt; Continue Shopping</div><button className="btn btn-primary float-right">Place Order</button>
+            <div onClick={() => this.props.changeItem('catalog', {})}> &lt; Continue Shopping</div><button className="btn btn-primary float-right">Place Order</button>
           </div>
         </form>
       </div>
