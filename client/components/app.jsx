@@ -79,12 +79,13 @@ export default class App extends React.Component {
       conditionalRender = <ProductList changeItem={this.setView} />;
     } else if (this.state.view.name === 'cart') {
       conditionalRender = <CartSummary changeItem={this.setView} productId={this.state.view.params} items={this.state.cart} />;
+    } else if (this.state.view.name === 'checkout') {
+      conditionalRender = <CheckoutForm changeItem={this.setView} productId={this.state.view.params}/>;
     }
     return (
       <div>
         <Header changeItem={this.setView} cartItemCount={this.state.cart} />
         {conditionalRender}
-        <CheckoutForm />
       </div>
     );
   }

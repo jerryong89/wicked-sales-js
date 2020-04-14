@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class CheckoutFrom extends React.Component {
+export default class CheckoutForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,7 +22,7 @@ export default class CheckoutFrom extends React.Component {
             <input type="credit-card" className="form-control"></input>
             <label>Shipping Address</label>
             <input type="shipping-address" className="form-control"></input>
-            <button onClick={() => this.props.onRender('catalog', {})}> &lt; Continue Shopping</button><button className="btn btn-primary float-right">Place Order</button>
+            <div onClick={() => this.props.changeItem('checkout', {})}> &lt; Continue Shopping</div><button className="btn btn-primary float-right">Place Order</button>
           </div>
         </form>
       </div>
