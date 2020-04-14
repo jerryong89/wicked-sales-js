@@ -48,6 +48,10 @@ export default class App extends React.Component {
       .catch(err => console.error(err));
   }
 
+  placeOrder({ name, creditCard, shippingAddress }) {
+    fetch('api/orders');
+  }
+
   componentDidMount() {
     this.getCartItems();
   }
