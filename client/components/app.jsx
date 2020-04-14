@@ -15,6 +15,7 @@ export default class App extends React.Component {
     this.setView = this.setView.bind(this);
     this.getCartItems = this.getCartItems.bind(this);
     this.addToCart = this.addToCart.bind(this);
+    this.placeOrder = this.placeOrder.bind(this);
   }
 
   setView(name, params) {
@@ -80,7 +81,7 @@ export default class App extends React.Component {
     } else if (this.state.view.name === 'cart') {
       conditionalRender = <CartSummary changeItem={this.setView} productId={this.state.view.params} items={this.state.cart} />;
     } else if (this.state.view.name === 'checkout') {
-      conditionalRender = <CheckoutForm changeItem={this.setView} productId={this.state.view.params}/>;
+      conditionalRender = <CheckoutForm changeItem={this.setView} productId={this.state.view.params} items={this.state.cart} placeOrder={this.placeOrder}/>;
     }
     return (
       <div>

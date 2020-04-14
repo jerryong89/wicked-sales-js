@@ -16,7 +16,7 @@ export default class CartSummary extends React.Component {
         <div className="col-2 text-secondary" onClick={() => this.props.changeItem('catalog', {})}>{'< Back to Catalog'}</div>
         {itemsInCart}
         {cartItem.map(item => { return <CartSummaryItem key={item.cartItemId} cartObject={item} />; })}
-        <div>Item Total: {cartTotal}</div>
+        <div>Item Total: ${cartTotal}</div>
         <button className="btn btn-primary float-right" onClick={() => this.props.changeItem('checkout', {})}>Check Out</button>
       </div>
     );
