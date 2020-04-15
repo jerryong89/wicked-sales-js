@@ -60,3 +60,10 @@
   margin-right: 12%;
   margin-top: 1.5%;
 }
+
+.rowmod{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0px;
+    margin-left: 0px;
+}
