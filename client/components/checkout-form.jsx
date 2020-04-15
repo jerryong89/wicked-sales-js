@@ -41,7 +41,9 @@ export default class CheckoutForm extends React.Component {
     return (
       <div className="container">
         <h1>Checkout</h1>
-        <div>Order Total: ${cartTotal}</div>
+        <div className="cartB"></div>
+        <div className="text-secondary">Order Total: ${cartTotal}</div>
+        <div className="cartB"></div>
         <form>
           <div className="form-group">
             <label>Name</label>
@@ -50,7 +52,8 @@ export default class CheckoutForm extends React.Component {
             <input type="credit-card" className="form-control" onChange={this.handleCreditCard}></input>
             <label>Shipping Address</label>
             <input type="shipping-address" className="form-control" onChange={this.handleShipping}></input>
-            <div className="text-secondary" onClick={() => this.props.changeItem('catalog', {})}>{'< Continue Shopping'}</div><button onClick={() => this.handleSubmit() } className="btn btn-primary float-right">Place Order</button>
+            <div className="cartB"></div>
+            <div className="text-secondary" onClick={() => this.props.changeItem('catalog', {})}>{'< Continue Shopping'}</div><button onClick={() => this.handleSubmit() } className="btn btn-primary float-right lastRow">Place Order</button>
           </div>
         </form>
       </div>
