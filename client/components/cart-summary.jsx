@@ -21,6 +21,7 @@ export default class CartSummary extends React.Component {
           <div>Item Total: ${cartTotal}</div>
           <button className="btn btn-primary float-right lastRow" onClick={() => this.props.changeItem('checkout', {})}>Check Out</button>
         </div>
+        <div className="cartSummaryB"></div>
       </div>
     );
   }
