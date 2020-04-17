@@ -47,11 +47,11 @@ export default class CheckoutForm extends React.Component {
         <form>
           <div className="form-group">
             <label>Name</label>
-            <input type="name" className="form-control" onChange={this.handleNameChange}></input>
+            <input required type="name" className="form-control" onChange={this.handleNameChange}></input>
             <label>Credit Card</label>
-            <input type="credit-card" className="form-control" onChange={this.handleCreditCard}></input>
+            <input required type="credit-card" className="form-control" onChange={this.handleCreditCard}></input>
             <label>Shipping Address</label>
-            <input type="shipping-address" className="form-control" onChange={this.handleShipping}></input>
+            <input required type="shipping-address" className="form-control" onChange={this.handleShipping}></input>
             <div className="cartB"></div>
             <div className="pointer text-secondary" onClick={() => this.props.changeItem('catalog', {})}>{'< Continue Shopping'}</div><button onClick={() => this.handleSubmit() } className="btn btn-primary float-right lastRow">Place Order</button>
           </div>
