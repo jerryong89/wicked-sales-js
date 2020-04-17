@@ -53,7 +53,7 @@ export default class CheckoutForm extends React.Component {
             <label>Shipping Address</label>
             <input type="shipping-address" className="form-control" onChange={this.handleShipping}></input>
             <div className="cartB"></div>
-            <div className="text-secondary" onClick={() => this.props.changeItem('catalog', {})}>{'< Continue Shopping'}</div><button onClick={() => this.handleSubmit() } className="btn btn-primary float-right lastRow">Place Order</button>
+            <div className="pointer text-secondary" onClick={() => this.props.changeItem('catalog', {})}>{'< Continue Shopping'}</div><button onClick={() => this.handleSubmit() } className="btn btn-primary float-right lastRow">Place Order</button>
           </div>
         </form>
       </div>

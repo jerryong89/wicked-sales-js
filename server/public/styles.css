@@ -82,3 +82,7 @@
 .zoom:hover {
   transform: scale(1.1);
 }
+
+.pointer{
+  cursor: pointer
+}
