@@ -16,7 +16,7 @@ export default class CartSummary extends React.Component {
     }
     return (
       <div className="container">
-        <div className="col-2 text-secondary pointer" onClick={() => this.props.changeItem('catalog', {})}>{'< Back to Catalog'}</div>
+        <div className="text-secondary pointer" onClick={() => this.props.changeItem('catalog', {})}>{'< Back to Catalog'}</div>
         {itemsInCart}
         {cartItem.map(item => { return <CartSummaryItem key={item.cartItemId} cartObject={item} />; })}
         <div className="cartB"></div>
