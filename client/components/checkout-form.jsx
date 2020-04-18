@@ -49,13 +49,13 @@ export default class CheckoutForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label>Name</label>
-            <input required type="name" className="form-control" onChange={this.handleNameChange}></input>
+            <input required type="name" className="form-control" placeholder="John Doe" onChange={this.handleNameChange}></input>
             <label>Credit Card</label>
             <input required id="ccn" type="tel" inputMode="numeric" pattern="[0-9\s]{13,19}" autoComplete="cc-number" maxLength="19" placeholder="xxxx xxxx xxxx xxxx" className="form-control" onChange={this.handleCreditCard}></input>
             <label>Shipping Address</label>
-            <input required type="shipping-address" className="form-control" onChange={this.handleShipping}></input>
+            <input required type="shipping-address" className="form-control" placeholder="Street, City, State Zip" onChange={this.handleShipping}></input>
             <div className="cartB"></div>
-            <div className="pointer text-secondary" onClick={() => this.props.changeItem('catalog', {})}>{'< Continue Shopping'}</div><button /* onClick={() => this.handleSubmit() } */ className="btn btn-primary float-right lastRow">Place Order</button>
+            <div className="pointer text-secondary" onClick={() => this.props.changeItem('catalog', {})}>{'< Continue Shopping'}</div><button className="btn btn-primary float-right lastRow">Place Order</button>
           </div>
         </form>
       </div>
