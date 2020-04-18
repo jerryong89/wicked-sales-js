@@ -62,7 +62,7 @@ export default class App extends React.Component {
       .then(data => {
         this.setState({
           cart: [],
-          view: { name: 'checkout', params: {} }
+          view: { name: 'catalog', params: {} }
         });
       })
       .catch(err => console.error(err));

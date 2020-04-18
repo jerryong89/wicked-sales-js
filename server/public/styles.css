@@ -20,6 +20,7 @@
   margin: 5px;
   background-color: white;
   justify-content: center;
+  min-width: 300px;
 }
 
 .size{
@@ -64,8 +65,6 @@
 .rowmod{
     display: flex;
     flex-wrap: wrap;
-    margin-right: 0px;
-    margin-left: 0px;
 }
 
 .cartB{
@@ -74,4 +73,85 @@
 
 .lastRow{
   margin-top: -32px;
+}
+
+.zoom {
+  transition: transform .1s;
+}
+.zoom:hover {
+  transform: scale(1.1);
+}
+
+.pointer{
+  cursor: pointer
+}
+
+.cartSummaryB{
+  margin-bottom: 5%;
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .bottomM{
+      margin-left: 35px;
+    }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .bottomM {
+      min-width: 265px;
+      margin-left: 33px;
+    }
+}
+
+    /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .bottomM {
+      margin-left: 28px;
+  }
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .bottomM {
+      min-width: 285px;
+      margin-left: 30px;
+    }
 }

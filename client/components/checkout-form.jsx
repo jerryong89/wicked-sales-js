@@ -33,7 +33,9 @@ export default class CheckoutForm extends React.Component {
   }
 
   handleSubmit(event) {
+    event.preventDefault();
     this.props.placeOrder(this.state);
+
   }
 
   render() {
@@ -44,16 +46,16 @@ export default class CheckoutForm extends React.Component {
         <div className="cartB"></div>
         <div className="text-secondary">Order Total: ${cartTotal}</div>
         <div className="cartB"></div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label>Name</label>
-            <input type="name" className="form-control" onChange={this.handleNameChange}></input>
+            <input required type="name" className="form-control" onChange={this.handleNameChange}></input>
             <label>Credit Card</label>
-            <input type="credit-card" className="form-control" onChange={this.handleCreditCard}></input>
+            <input required id="ccn" type="tel" inputMode="numeric" pattern="[0-9\s]{13,19}" autoComplete="cc-number" maxLength="19" placeholder="xxxx xxxx xxxx xxxx" className="form-control" onChange={this.handleCreditCard}></input>
             <label>Shipping Address</label>
-            <input type="shipping-address" className="form-control" onChange={this.handleShipping}></input>
+            <input required type="shipping-address" className="form-control" onChange={this.handleShipping}></input>
             <div className="cartB"></div>
-            <div className="text-secondary" onClick={() => this.props.changeItem('catalog', {})}>{'< Continue Shopping'}</div><button onClick={() => this.handleSubmit() } className="btn btn-primary float-right lastRow">Place Order</button>
+            <div className="pointer text-secondary" onClick={() => this.props.changeItem('catalog', {})}>{'< Continue Shopping'}</div><button /* onClick={() => this.handleSubmit() } */ className="btn btn-primary float-right lastRow">Place Order</button>
           </div>
         </form>
       </div>

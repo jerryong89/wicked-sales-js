@@ -32,7 +32,7 @@ export default class ProductDetails extends React.Component {
         <div className="container col-11 detailPage ">
           <div className="row topRow">
             <div className="column col-5">
-              <div className="text-secondary" onClick={() => this.props.changeItem('catalog')}>{'< Back to Catalog'}</div>
+              <div className="pointer text-secondary" onClick={() => this.props.changeItem('catalog')}>{'< Back to Catalog'}</div>
               <div className="col-12"><img className="size" src={this.state.product.image} alt="" /></div>
             </div>
             <div className="column col-7">
