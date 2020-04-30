@@ -24,6 +24,7 @@ export default class ProductList extends React.Component {
   render() {
     return (
       <div className="container col-12">
+        {/* <div><img src="images/wallpaper.svg" alt=""/></div> */}
         <div className="row col-12 row d-flex justify-content-center">
           {this.state.products.map(product => < ProductListItem key={product.productId} changeItem={this.props.changeItem} item={product} />)}
         </div>
