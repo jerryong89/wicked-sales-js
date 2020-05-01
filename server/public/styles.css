@@ -4,12 +4,12 @@
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 12%;
-  margin-bottom: 1%;
+  margin-bottom: 0%;
 }
 
-.background{
+/* .background{
   background-color: #f8f9fa;
-}
+} */
 
 .bottomM{
   margin-bottom: 25px;
@@ -39,7 +39,7 @@
 }
 
 .detailPage{
- border-style: solid;
+ border-style: none;
   border-width: 1px;
   border-radius: 5px;
   border-color: lightgray;
@@ -79,12 +79,14 @@
   transition: transform .1s;
 }
 .zoom:hover {
-  transform: scale(1.1);
-  z-index: 1
+  transform: scale(1.03);
+  z-index: 1;
+  text-decoration: underline;
 }
 
 .pointer{
-  cursor: pointer
+  cursor: pointer;
+  border-style: none;
 }
 
 .cartSummaryB{
@@ -155,4 +157,81 @@
       min-width: 285px;
       margin-left: 30px;
     }
+}
+
+/* .background {
+  background: url(images/wallpaper.svg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+.climbingwall{
+  max-width: 100%;
+  min-width: 100%;
+  width: fit-content;
+  object-fit: cover;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 1%;
+  height: 300px;
+}
+
+.climbingwallBottom{
+  max-width: 100%;
+  min-width: 100%;
+  width: fit-content;
+  object-fit: cover;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  margin-top: 1%;
+  height: 0px;
+}
+
+.climbingwallBottom2{
+  max-width: 100%;
+  min-width: 100%;
+  width: fit-content;
+  object-fit: cover;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  margin-top: 10%;
+  height: 0px;
+}
+
+
+.sales {
+  border-style: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.modal-content {
+  width: 49%;
+  text-align: center;
+  background: rgba(240, 248, 255, 0.60);
+  border-radius: 25pt;
+}
+
+.topMargin{
+  margin-top: 1%;
 }

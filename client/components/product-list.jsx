@@ -23,11 +23,15 @@ export default class ProductList extends React.Component {
 
   render() {
     return (
-      <div className="container col-12">
-        <div className="row col-12 row d-flex justify-content-center">
-          {this.state.products.map(product => < ProductListItem key={product.productId} changeItem={this.props.changeItem} item={product} />)}
+      <>
+        <div className="climbingwall col-12"><img className="climbingwall" src="images/wallpaper.svg" alt=""/></div>
+        <div className="container">
+          <div className="sales col-12 row d-flex justify-content-center">
+            {this.state.products.map(product => < ProductListItem key={product.productId} changeItem={this.props.changeItem} item={product} />)}
+          </div>
         </div>
-      </div>
+        <div className="climbingwallBottom col-12"><img className="climbingwall" src="images/wallpaper.svg" alt="" /></div>
+      </>
     );
   }
 }
