@@ -29,21 +29,24 @@ export default class ProductDetails extends React.Component {
       return null;
     } else {
       return (
-        <div className="container col-11 detailPage ">
-          <div className="row topRow">
-            <div className="column col-5">
-              <div className="pointer text-secondary" onClick={() => this.props.changeItem('catalog')}>{'< Back to Catalog'}</div>
-              <div className="col-12"><img className="size" src={this.state.product.image} alt="" /></div>
+        <>
+          <div className="container col-11 detailPage ">
+            <div className="row topRow">
+              <div className="column col-5">
+                <div className="pointer text-secondary" onClick={() => this.props.changeItem('catalog')}>{'< Back to Catalog'}</div>
+                <div className="col-12"><img className="size" src={this.state.product.image} alt="" /></div>
+              </div>
+              <div className="column col-7">
+                <div className="bottom font-weight-bold detailName">{this.state.product.name}</div>
+                <div className="bottom text-secondary">${(this.state.product.price / 100).toFixed(2)}</div>
+                <div >{this.state.product.shortDescription}</div>
+                <button type="button" className="topMargin btn btn-primary" onClick={() => this.props.addProduct(product)}>Add to Cart</button>
+              </div>
             </div>
-            <div className="column col-7">
-              <div className="bottom font-weight-bold detailName">{this.state.product.name}</div>
-              <div className="bottom text-secondary">${(this.state.product.price / 100).toFixed(2)}</div>
-              <div >{this.state.product.shortDescription}</div>
-              <button type="button" className="btn btn-primary" onClick={() => this.props.addProduct(product)}>Add to Cart</button>
-            </div>
-          </div>
-          <div className="row bottomRow" >{this.state.product.longDescription}</div>
-        </div >
+            <div className="row bottomRow" >{this.state.product.longDescription}</div>
+          </div >
+          <div className="climbingwallBottom2 col-12"><img className="climbingwall" src="images/wallpaper.svg" alt="" /></div>
+        </>
       );
     }
   }

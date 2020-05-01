@@ -15,17 +15,20 @@ export default class CartSummary extends React.Component {
       checkOutButton = <button className="btn btn-primary float-right lastRow" onClick={() => this.props.changeItem('checkout', {})}>Check Out</button>;
     }
     return (
-      <div className="container">
-        <div className="text-secondary pointer" onClick={() => this.props.changeItem('catalog', {})}>{'< Back to Catalog'}</div>
-        {itemsInCart}
-        {cartItem.map(item => { return <CartSummaryItem key={item.cartItemId} cartObject={item} />; })}
-        <div className="cartB"></div>
-        <div>
-          <div>Item Total: ${cartTotal}</div>
-          {checkOutButton}
+      <>
+        <div className="container">
+          <div className="text-secondary pointer" onClick={() => this.props.changeItem('catalog', {})}>{'< Back to Catalog'}</div>
+          {itemsInCart}
+          {cartItem.map(item => { return <CartSummaryItem key={item.cartItemId} cartObject={item} />; })}
+          <div className="cartB"></div>
+          <div>
+            <div>Item Total: ${cartTotal}</div>
+            {checkOutButton}
+          </div>
+          <div className="cartSummaryB"></div>
         </div>
-        <div className="cartSummaryB"></div>
-      </div>
+        <div className="climbingwallBottom2 col-12"><img className="climbingwall" src="images/wallpaper.svg" alt="" /></div>
+      </>
     );
   }
 }
